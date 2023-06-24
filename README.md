@@ -16,7 +16,7 @@ https://segunda-preentrega-js-gelabert-francisco.vercel.app/
 
 El objetivo es desarrollar una página con contendo relacionado a salud y alimentación.
 
-Para comenzar se desarrollaron las dos siguientes funcionalidades,a diferencia de la primera entrega se agregan Objetos (Persona, Alimento y Bebidas), y todas las funcionalidades para su tratamiento:
+Para comenzar se desarrollaron las dos siguientes funcionalidades,a diferencia de la primera entrega se agregan Objetos (Persona, Alimento y Bebidas), listas (receta y bodega entre otras) y todas las funcionalidades para su tratamiento:
 
 **Índice de masa corporal:** permite realizar un cálculo del indice de masa corporal según los estándares de la OMS- Organización mundial de la salud. 
 
