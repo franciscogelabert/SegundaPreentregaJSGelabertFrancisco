@@ -31,8 +31,8 @@ switch (opcion) {
 
 function imc() {
 
-    const persona1= new Persona();
-   
+    const persona1 = new Persona();
+
 
     // se solicitan los datos para el cálculo
     persona1.apellido = prompt('--> Ingrese su Apellido: ');
@@ -55,8 +55,8 @@ function imc() {
     // la función Math.pow (a,b) eleva "a" a la potencia "b"
     // la función Math.round() retorna el valor de un número redondeado al entero más cercano.
 
-    alert(persona1.nombre +': Con una altura de: ' + persona1.estatura 
-    + ' un peso de: ' + persona1.peso  + '\n' +
+    alert(persona1.nombre + ': Con una altura de: ' + persona1.estatura
+        + ' un peso de: ' + persona1.peso + '\n' +
         ' Su índice de Masa Corporal es de :  ' + Math.round(persona1.imc()) + '\n \n ' +
         '-----------------------------------------------' + '\n' +
         '                     Según Tabla de IMC                    ' + '\n' +
@@ -68,21 +68,21 @@ function imc() {
 // permite el ingreso de las listas de Alimentos y bebidas
 
 function reporteAlimenticio() {
-    
-       // campos que se utiliza en estructuras de control
+
+    // campos que se utiliza en estructuras de control
     let tipo = "";
 
     // si es Alimento toma el valor gramo sino mililitro
     let unidades = "";
 
-   //atributos de los ítems
+    //atributos de los ítems
     let nombre = "";
     let precio = 0;
     let cantidad = 0;
     let calorias = 0;
     let sodio = 0;
     let grasas = 0;
-    let alcohol = 0 ;
+    let alcohol = 0;
 
     //listas de ítems de bebidas y alimentos
     let receta = [];
@@ -119,26 +119,26 @@ function reporteAlimenticio() {
         calorias = parseInt(prompt('--> Calorías cada 100 ' + unidades + ': '));
         sodio = parseInt(prompt('--> Sodio cada 100 ' + unidades + ': '));
 
-          // Ingreso de campo nombre del ítem    
-          if (tipo == 'A') {
+        // Ingreso de campo nombre del ítem    
+        if (tipo == 'A') {
             grasas = parseInt(prompt('--> Grasas cada 100 ' + unidades + ': '));
-           
+
         } else {
             alcohol = parseInt(prompt('--> Graduación alcohólica (%) : '));
-          
+
         }
-        
-        
+
+
         // almacena el item en la lista que le corresponde
 
         if (tipo == 'A') {
-            const alimento1= new Alimento(nombre, precio, cantidad, calorias, sodio, grasas);
+            const alimento1 = new Alimento(nombre, precio, cantidad, calorias, sodio, grasas);
             receta.push(alimento1)
         } else {
             const bebida1 = new Bebida(nombre, precio, cantidad, calorias, sodio, alcohol);
             bodega.push(bebida1)
         }
-        
+
         continuar = prompt('** Desea agregar otro item en el carrito de compras? si/no **').toUpperCase();
 
     } while (continuar == 'SI' || continuar == 'S' || continuar == 'SÍ');
@@ -176,33 +176,33 @@ function calcularTotales(r) {
     let totalSodio = 0;
     let totalGrasas = 0;
     let totalAlcohol = 0;
-    
-   for (let i = 0; i < r.length; i++) {
+
+    for (let i = 0; i < r.length; i++) {
 
         iCantidad = parseInt(r[i].cantidad);
         iCalorias = parseInt(r[i].calorias);
         iSodio = parseInt(r[i].sodio);
-       
-        
+
+
         totalCalorias = totalCalorias + iCantidad / 100 * iCalorias;
         totalSodio = totalSodio + iCantidad / 100 * iSodio;
 
         if (r[i] instanceof Alimento) {
-            iGrasas= parseInt(r[i].grasas);
+            iGrasas = parseInt(r[i].grasas);
             totalGrasas = totalGrasas + iCantidad / 100 * iGrasas;
-            
-            } else if (r[i] instanceof Bebida){
-            iAlcohol= parseInt(r[i].alcohol);
+
+        } else if (r[i] instanceof Bebida) {
+            iAlcohol = parseInt(r[i].alcohol);
             totalAlcohol = totalAlcohol + iAlcohol;
-            }
-       
+        }
+
     }
 
     // la función Math.round()retorna el valor de un número redondeado al entero más cercano.
-    let cantidades = [ ];
+    let cantidades = [];
 
     if (r[1] instanceof Alimento) {
-        cantidades = [ {
+        cantidades = [{
             descripcion: 'Calorías',
             cantidad: Math.round(totalCalorias)
         },
@@ -215,22 +215,22 @@ function calcularTotales(r) {
             cantidad: Math.round(totalGrasas)
         },
         ]
-        
-        } else if (r[1] instanceof Bebida){
-            cantidades = [ {
-                descripcion: 'Calorías',
-                cantidad: Math.round(totalCalorias)
-            },
-            {
-                descripcion: 'Sodio',
-                cantidad: Math.round(totalSodio)
-            },
-            {
-                descripcion: 'Promedio % de Alcohol',
-                cantidad: Math.round(totalAlcohol/r.length)
-            },
-            ]
-        }
-         
+
+    } else if (r[1] instanceof Bebida) {
+        cantidades = [{
+            descripcion: 'Calorías',
+            cantidad: Math.round(totalCalorias)
+        },
+        {
+            descripcion: 'Sodio',
+            cantidad: Math.round(totalSodio)
+        },
+        {
+            descripcion: 'Promedio % de Alcohol',
+            cantidad: Math.round(totalAlcohol / r.length)
+        },
+        ]
+    }
+
     console.table(cantidades);
 }
