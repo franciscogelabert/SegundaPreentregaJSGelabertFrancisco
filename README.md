@@ -1,16 +1,16 @@
 # Foodier
 
-*Primer PreEntrega JavaScript - Gelabert Francisco - JS Comisión 52245 | Coderhouse*
+*Segunda PreEntrega JavaScript - Gelabert Francisco - JS Comisión 52245 | Coderhouse*
 
 ## 01- Datos para acceder a la entrega
 
 **Github**
 
-https://franciscogelabert.github.io/PrimerPreentregaJSGelabertFrancisco/
+https://franciscogelabert.github.io/SegundaPreentregaJSGelabertFrancisco/
 
 **Deploy Vercel**
 
-https://primer-preentrega-js-gelabert-francisco.vercel.app/
+https://segunda-preentrega-js-gelabert-francisco.vercel.app/
 
 ## 02- Descripción entrega inicial
 
