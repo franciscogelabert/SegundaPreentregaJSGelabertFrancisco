@@ -75,11 +75,7 @@ function reporteAlimenticio() {
     // si es Alimento toma el valor gramo sino mililitro
     let unidades = "";
 
-    // ítems de alimento y bebida
-    let alimento;
-    let bebida;
-
-    //atributos de los ítems
+   //atributos de los ítems
     let nombre = "";
     let precio = 0;
     let cantidad = 0;
@@ -181,9 +177,7 @@ function calcularTotales(r) {
     let totalGrasas = 0;
     let totalAlcohol = 0;
     
-   /// arreglar esto y agregar fecha de vencimiento y vencido si/no
-
-    for (let i = 0; i < r.length; i++) {
+   for (let i = 0; i < r.length; i++) {
 
         iCantidad = parseInt(r[i].cantidad);
         iCalorias = parseInt(r[i].calorias);
