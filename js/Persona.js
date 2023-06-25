@@ -23,17 +23,17 @@ class Persona {
         let opcion = this.imc();
 
         if (opcion <= 18.5)
-            return ('La Persona se encuentra Bajo de peso');
+            return ('La persona se encuentra Bajo de peso');
         else if (opcion > 18.5 && opcion <= 25)
-            return ('La Persona posee un peso normal');
+            return ('La persona posee un peso normal');
         else if (opcion > 25 && opcion <= 30)
-            return ('La Persona posee Pre-obesidad o Sobrepeso');
+            return ('La persona posee Pre-obesidad o Sobrepeso');
         else if (opcion > 30 && opcion <= 35)
-            return ('La Persona posee Obesidad clase I ');
+            return ('La persona posee Obesidad clase I ');
         else if (opcion > 35 && opcion <= 40)
-            return ('La Persona posee Obesidad clase I ');
+            return ('La persona posee Obesidad clase I ');
         else if (opcion > 40)
-            return('La Persona posee Obesidad clase III');
+            return('La persona posee Obesidad clase III');
     }
 
 
