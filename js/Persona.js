@@ -31,7 +31,7 @@ class Persona {
         else if (opcion > 30 && opcion <= 35)
             return ('La persona posee Obesidad clase I ');
         else if (opcion > 35 && opcion <= 40)
-            return ('La persona posee Obesidad clase I ');
+            return ('La persona posee Obesidad clase II ');
         else if (opcion > 40)
             return('La persona posee Obesidad clase III');
     }
